@@ -1,0 +1,10 @@
+<div>
+  <span class="badge badge-pill m-2 "
+    [ngClass]="{
+      'badge-primary' : counter.value > 0,
+      'badge-warning' : counter.value == 0
+    }">{{getCounterValueToDisplay(counter.value)}}</span>
+  <button class="btn btn-secondary m-1" style="padding: 2px 8px" (click)="incrementCounterValue(counter)"><strong>+</strong></button>
+  <button class="btn btn-secondary m-1" style="padding: 2px 8px" (click)="decrementCounterValue(counter)"><strong>-</strong></button>
+  <button class="btn btn-danger btn-sm m-2" (click)="deleteCounterObject(counter)">Delete</button>
+</div>
